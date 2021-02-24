@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Lucio_FileProcessor::processor" title="File Processor" translate="title" module="Lucio_FileProcessor" sortOrder="11" parent="Magento_Backend::system" resource="Lucio_FileProcessor::processor"/>
+        <add id="Lucio_FileProcessor::processor_fileimport" title="File Import" translate="title" module="Lucio_FileProcessor" sortOrder="50" parent="Lucio_FileProcessor::processor" action="fileprocessor/file" resource="Lucio_FileProcessor::processor_fileimport" />
+    </menu>
+</config>

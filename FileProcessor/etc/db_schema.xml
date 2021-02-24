@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="lucio_fileprocessor" resource="default" engine="innodb" comment="Import File Table">
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="longtext" name="key" nullable="false" comment="Key"/>
+        <column xsi:type="longtext" name="name" nullable="true" comment="Name"/>
+        <column xsi:type="int" name="file_type" nullable="false" comment="File Type"/>
+        <column xsi:type="longtext" name="description" nullable="true" comment="Description"/>
+        <column xsi:type="longtext" name="origin_location" nullable="true" comment="Origin Location"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Date Posted"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>
